@@ -1,0 +1,182 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  //Start copy here ------------------------>
+	"Dijit drop down menu": {
+		"prefix": "dijit-drop-menu",
+		"body": [
+			"<div data-dojo-type=\"dijit/DropDownMenu\" id=\"navMenu\">",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCut', onClick:function(){alert('cut!')}\">Cut</div>",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCopy', onClick:function(){alert('copy!')}\">Copy</div>",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconPaste', onClick:function(){alert('paste!')}\">Paste</div>",
+			"\t<div data-dojo-type=\"dijit/MenuSeparator\"></div>",
+			"\t<div data-dojo-type=\"dijit/PopupMenuItem\">",
+			"\t\t<span>Action</span>",
+			"\t\t<div data-dojo-type=\"dijit/DropDownMenu\" id=\"submenu2\">",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('nested #1!')}\">Nested #1</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('nested #2!')}\">Nested #2</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('nested #3!')}\">Nested #3</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "dijit dropdown menu"
+	},
+
+	"Dijit menu": {
+		"prefix": "dijit-menu",
+		"body": [
+			"<div data-dojo-type=\"dijit/Menu\" id=\"windowContextMenu\" data-dojo-props=\"contextMenuForWindow:true\" style=\"display: none;\">",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCut', onClick:function(){alert('not actually cutting anything, just a test!')}\">Cut</div>",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCopy', onClick:function(){alert('not actually copying anything, just a test!')}\">Copy</div>",
+			"\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconPaste', onClick:function(){alert('not actually pasting anything, just a test!')}\">Paste</div>",
+			"\t<div data-dojo-type=\"dijit/MenuSeparator\"></div>",
+			"\t<div data-dojo-type=\"dijit/PopupMenuItem\">",
+			"\t\t<span>Enabled Submenu</span>",
+			"\t\t<div data-dojo-type=\"dijit/Menu\" id=\"submenu1\">",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('Submenu 1!')}\">Submenu Item One</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('Submenu 2!')}\">Submenu Item Two</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"\t<div data-dojo-type=\"dijit/PopupMenuItem\">",
+			"\t\t<span>Popup of something other than a menu</span>",
+			"\t\t<div data-dojo-type=\"dijit/ColorPalette\"></div>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "dijit dropdown menu"
+	},
+
+	"Dijit menu bar": {
+		"prefix": "dijit-menu-bar",
+		"body": [
+			"<div data-dojo-type=\"dijit/MenuBar\" id=\"navMenu\">",
+			"\t<div data-dojo-type=\"dijit/PopupMenuBarItem\">",
+			"\t\t<span>File</span>",
+			"\t\t<div data-dojo-type=\"dijit/DropDownMenu\" id=\"fileMenu\">",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('file 1');}\">File #1</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"onClick:function(){alert('file 2');}\">File #2</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"\t<div data-dojo-type=\"dijit/PopupMenuBarItem\">",
+			"\t\t<span>Edit</span>",
+			"\t\t<div data-dojo-type=\"dijit/DropDownMenu\" id=\"editMenu\">",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCut',  onClick:function(){alert('cut!')}\">Cut</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconCopy', onClick:function(){alert('copy!')}\">Copy</div>",
+			"\t\t\t<div data-dojo-type=\"dijit/MenuItem\" data-dojo-props=\"iconClass:'dijitEditorIcon dijitEditorIconPaste', onClick:function(){alert('paste!')}\">Paste</div>",
+			"\t\t</div>",
+			"\t</div>",
+			"\t<div data-dojo-type=\"dijit/MenuBarItem\">",
+			"\t\tSave",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "dijit menu bar"
+	},
+
+	"Dijit calendar": {
+		"prefix": "dijit-calendar",
+		"body": [
+			"<div id=\"myCal\" data-dojo-type=\"dijit/Calendar\" value=\"2009-08-07\" ></div>"
+		],
+		"description": "dijit calendar"
+	},
+
+	"Dijit calendar lite": {
+		"prefix": "dijit-calendar-lite",
+		"body": "<div id=\"myLiteCal\" data-dojo-type=\"dijit/CalendarLite\" value=\"2009-08-07\"></div>",
+		"description": "dijit calendar lite"
+	},
+
+	"Dijitc color palette": {
+		"prefix": "dijit-color-palette",
+		"body": "<div data-dojo-type=\"dijit/ColorPalette\" data-dojo-props=\"onChange:function(){alert(this.value);}, palette:'3x4'\"></div>",
+		"description": "dijit color palette"
+	},
+
+	"Dijit dialog" : {
+		"prefix": "dijit-dialog",
+		"body": [
+			"<div data-dojo-type=\"dijit/Dialog\" data-dojo-id=\"myDialog\" title=\"Name and Address\">",
+			"\t<table class=\"dijitDialogPaneContentArea\">",
+			"\t\t<tr>",
+			"\t\t\t<td><label for=\"name\">Name:</label></td>",
+			"\t\t\t<td><input data-dojo-type=\"dijit/form/TextBox\" name=\"name\" id=\"name\"></td>",
+			"\t\t</tr>",
+			"\t\t<tr>",
+			"\t\t\t<td><label for=\"address\">Address:</label></td>",
+			"\t\t\t<td><input data-dojo-type=\"dijit/form/TextBox\" name=\"address\" id=\"address\"></td>",
+			"\t\t</tr>",
+			"\t</table>",
+			"\t<div class=\"dijitDialogPaneActionBar\">",
+			"\t\t\t<button dojoType=\"dijit.form.Button\" type=\"submit\" id=\"ok\">OK</button>",
+			"\t\t<button dojoType=\"dijit.form.Button\" type=\"button\" onClick=\"myDialog.onCancel();\" id=\"cancel\">Cancel</button>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "dijit dialog"
+	},
+
+	"Dijit editor": {
+		"prefix": "dijit-editor",
+		"body": [
+			"<div data-dojo-type=\"dijit/Editor\" id=\"myEditor\">",
+			"\t<p>This is the initial content.</p>",
+			"</div>"
+		],
+		"description": "dijit text editor"
+	},
+
+	"Dijit tooltip": {
+		"prefix": "dijit-tooltip",
+		"body": [
+			"<div data-dojo-type=\"dijit/Tooltip\" data-dojo-props=\"connectId:'buttonId',position:['above']\">",
+    		"\ta <i>disposition</i> to bear injuries patiently : <b>forbearance</b>",
+			"</div>"
+		],
+		"description": "dijit tooltip"
+	},
+
+	"Dijit radio button": {
+		"prefix": "bijit-radio-button",
+		"body": [
+
+		],
+		"description": "dijit radio button"
+	},
+
+	"Dijit check box": {
+		"prefix": "dijit-check-box",
+		"body": [
+			"<input id='mycheck' name='mycheck' data-dojo-type='dijit/form/CheckBox' value='agreed' checked />",
+			"<label for='mycheck'>I agree</label>"
+		],
+		"description": "dijit check box"
+	},
+
+	"Dijit combo button": {
+		"prefix": "dijit-combo-button",
+		"body": [
+			"<div data-dojo-type='dijit/form/ComboButton'>",
+    		"\t<span>get all mail</span>",
+    		"\t<div data-dojo-type='dijit/DropDownMenu'>",
+        	"\t\t<div data-dojo-type='dijit/MenuItem' data-dojo-props='onClick:function(){console.log('hi!')}'>Yahoo</div>",
+        	"\t\t<div data-dojo-type='dijit/MenuItem' data-dojo-props='onClick:function(){console.log('ho!')}'>Google</div>",
+    		"\t</div>",
+			"</div>"
+		],
+		"description": "dijit combo box"
+	}
+  //End copy here <----------------
+}
