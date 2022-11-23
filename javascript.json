@@ -1,0 +1,306 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  // Compy from here ------------>
+	"Express route": {
+		"prefix": ["xpress-route"],
+		"body": [
+			"const express = require('express');\nconst hostConfig = require('../../host_config');\nconst router = express.Router();\nconst loggerProvider = require('@dandsltd/k8s-logging')(hostConfig.loggingSettings);\nconst logger = loggerProvider('legalPerson');\nconst dragon = require('@dandsltd/node-dragon')(hostConfig.dragonCn, hostConfig.env, logger);",
+			"\n",
+			"router.get('/', async (req, res) => {\n\tconsole.log(req.query)\n});\n",
+			"router.get('/:id', async (req, res) => {\n\tconsole.log(req.query)\n});\n",
+			"router.post('/:id', async (req, res) => {\n\tconsole.log(req.query)\n});\n",
+			"router.put('/:id', async (req, res) => {\n\tconsole.log(req.query)\n});\n",
+			"router.delete('/:id', async (req, res) => {\n\tconsole.log(req.query)\n});\n\n",
+			"module.exports = router;"
+		],
+		"description": "Importing D&S standard dependencies and creating routes"
+	},
+	"Dojo toolkit widget": {
+		"prefix": ["dojo-widget"],
+		"body": [
+			"define([",
+			"\t'dojo/_base/declare',",
+    		"\t'dojo/_base/lang',",
+			"\t'dijit/_WidgetBase',", 
+			"\t'dijit/_TemplatedMixin',",
+			"\t'dijit/_WidgetsInTemplateMixin',",
+			"\t'dojo/ready',",
+			"\t'dojo/dom',",
+			"\t'dijit/registry',",
+			"\t'dojo/require',",
+			"\t'dojo/on',",
+			"\t'dojo/dom-construct',",
+			"\t'dojo/domReady!'",
+			"], function (declare, lang, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, ready, dom, registry, require, on, domConstruct) {",
+			"\treturn declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {",
+			"\t\tconstructor: function (kwArgs) {",
+			"\t\t\tlang.mixin(this, kwArgs);",
+			"\t\t},\n",
+			"\t\tpostCreate: function () { $0 },",
+			"\t});",
+			"});\n"
+		],
+		"description": "Dojo toolkit declarative widget",
+	},
+	
+	"Logger error": {
+		"prefix": "logger-err",
+		"body": "logger.error({error}, '$0');"
+	},
+
+	"Logger warn": {
+		"prefix": "logger-warn",
+		"body": "logger.warn('$0');"
+	},
+
+	"Logger log": {
+		"prefix": "logger-log",
+		"body": "logger.log('$0');"
+	},
+
+	// Dijit Javascript components
+	"Dijit tooltip": {
+		"prefix": "dijit-tooltip",
+		"body": [
+			"new Tooltip({",
+			"\tconnectId: ['bar1', 'bar4'],",
+			"\tlabel: 'value <b>74</b>'",
+			"});",
+		],
+	},
+
+	"Dijit dialog": {
+		"prefix": "dijit-dialog",
+		"body": [
+			"new Dialog({",
+			"\ttitle: 'My Dialog',",
+			"\tcontent: 'Test content.',",
+			"\tstyle: 'width: 300px'",
+			"});",
+		],
+	},
+
+	"Dijit textbox": {
+		"prefix": "dijit-text-box",
+		"body": [
+			"new TextBox({",
+			"\tname: 'firstname',",
+			"\tvalue: '' /* no or empty value! */,",
+			"\tplaceHolder: 'type in your name'",
+			"}, 'firstname');"
+		],
+		"description": "dijit text box"
+	},
+
+	"Dijit textarea": {
+		"prefix": "dijit-textarea",
+		"body": [
+			"new Textarea({",
+			"\tname: 'myarea',",
+			"\tvalue: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.',",
+			"\tstyle: 'width:200px;'",
+			"}, 'myarea');"
+		],
+		"description": "dijit textarea"
+	},
+
+	"Dijit validation textbox": {
+		"prefix": "dijit-validation-textbox",
+		"body": [
+			"new ValidationTextBox({",
+			"\tid: 'myValidationTextbox',",
+			"\tname: 'myValidationTextbox',",
+			"\tmaxLength: 32",
+			"}, 'targetId');"
+		],
+		"description": "dijit validation textarea"
+	},
+
+	"Dijit simple textarea": {
+		"prefix": "dijit-simple-textarea",
+		"body": [
+			"new SimpleTextarea({",
+			"\tname: 'myarea',",
+			"\trows: '4',",
+			"\tcols: '50',",
+			"\tstyle: 'width:auto;'",
+			"}, 'myarea');"
+		],
+		"description": "dijit simple textarea"
+	},
+
+	"Dijit number textbox": {
+		"prefix": "dijit-number-textbox",
+		"body": "new NumberTextBox({ \n\tname: 'programmatic', \n\tconstraints: { \n\t\tpattern: '0.######' \n\t} \n}, 'programmatic');",
+		"description": "dijit number textbox"
+	},
+
+	"Dijit currency textbox": {
+		"prefix": "dijit-currency-textbox",
+		"body": [
+			"new CurrencyTextBox({",
+			"\tvalue: 54775.53,",
+			"\tlang: 'de-de',",
+			"\tcurrency: 'EUR',",
+			"\tinvalidMessage: `Invalid amount.  Example: ${example}`",
+			"}, 'target')"
+		],
+		"description": "dijit currency textbox"
+	},
+
+	"Dijit combo box": {
+		"prefix": "dijit-combo-box",
+		"body": [
+			"\tnew ComboBox({",
+			"\tid: 'stateSelect',",
+			"\tname: 'state',",
+			"\tvalue: 'California',",
+			"\tstore: stateStore,",
+			"\tsearchAttr: 'name'",
+			"}, 'stateSelect');"
+		],
+		"description": "dijit combo box"
+	},
+
+	"Dijit select": {
+		"prefix": "dijit-select",
+		"body": [
+			"new Select({",
+			"\tname: 'select2',",
+			"\toptions: [",
+			"\t\t{ label: 'TN', value: 'Tennessee' },",
+			"\t\t{ label: 'VA', value: 'Virginia', selected: true },",
+			"\t\t{ label: 'WA', value: 'Washington' },",
+			"\t\t{ label: 'FL', value: 'Florida' },",
+			"\t\t{ label: 'CA', value: 'California' }",
+			"\t]",
+			"}).placeAt(win.body());"
+		],
+		"description": "dijit select"
+	},
+
+	"Dijit filtering select form": {
+		"prefix": "filtering-select-form",
+		"body": [
+			"this._filteringSelectForm = new FilteringSelectForm({",
+            "\t_formID: 'formId',",
+            "\t_filteringSelectID: 'filteringSelectId',",
+            "\t_updateButtonID: 'updateButtonId',",
+            "\t_createButtonID: 'createButtonId',",
+            "\t_cancelButtonID: 'cancelButtonId',",
+            "\t_fadeAlertID: 'formAlertId',",
+            "\t_checkCollectionID: 'checkCollectionId',",
+            "\t_formStoreTarget: '/api/action/master/',",
+            "\t_filteringSelectStoreTarget: '/api/action/master/',",
+            "\t_formDefaults: {",
+            "\t\t'actionReviewDays': 0,",
+            "\t\t'actionSecurity': '6',",
+            "\t\t'actionRightParty': 'N'",
+            "\t},",
+            "\t_formFocusID: 'actionID'",
+            "});",
+            "this._filteringSelectForm.startup()"
+		],
+		"description": "filtering select widget"
+	},
+
+	"Dijit filtering select": {
+		"prefix": "dijit-filtering-select",
+		"body": [
+			"new FilteringSelect({",
+			"\tid: 'stateSelect',",
+            "\tname: 'state',",
+            "\tvalue: 'CA',",
+            "\tstore: stateStore,",
+            "\tsearchAttr: 'name'",
+			"}, 'stateSelect');"
+		],
+		"description": "filtering select"
+	},
+
+	"Dijit button": {
+		"prefix": "dijit-button",
+		"body": [
+			"new Button({",
+			"\tlabel: 'Click me!',",
+			"\tonClick: function() {",
+			"\t\tconsole.log('test')",
+			"\t}",
+			"}, 'progButtonNode');"
+		],
+		"description": "dijit button"
+	},
+
+	"Dijit toggle button": {
+		"prefix": "dijit-toggle-button",
+		"body": [
+			"new ToggleButton({",
+			"\tshowLabel: true,",
+			"\t\tchecked: false,",
+			"\t\tonChange: function(val){ this.set('label', val) },",
+			"\t\tlabel: 'false'",
+			"\t}, 'programmatic');"
+		],
+		"description": "dijit toggle button"
+	},
+
+	"Dijit combo button": {
+		"prefix": "dijit-combo-button",
+		"body": [
+			"var menu = new Menu({ style: 'display: none;'});\n",
+			"var menuItem1 = new MenuItem({",
+			"\tlabel: 'Yahoo',",
+			"\tonClick: function(){ alert('hi'); }",
+			"});\n",
+			"var menuItem2 = new MenuItem({",
+			"\tlabel: 'Google',",
+			"\tonClick: function(){ alert('ho'); }",
+			"});\n",
+			"menu.addChild(menuItem1);",
+			"menu.addChild(menuItem2);",
+			"",
+			"new ComboButton({",
+			"\tlabel: 'get all mail',",
+			"\tdropDown: menu",
+			"}).placeAt(dojo.body());"
+		]
+	},
+
+	"Dijit checkbox": {
+		"prefix": "dijit-checkbox",
+		"body": [
+			"new CheckBox({",
+			"\tname: 'checkBox',",
+			"\tvalue: 'agreed',",
+			"\tchecked: false,",
+			"\tonChange: function(e){ console.log(e); }",
+			"}, 'checkBox');"
+		]
+	},
+
+	"Dijit radio button": {
+		"prefix": "dijit-radio-button",
+		"body": [
+			"new RadioButton({",
+			"\tchecked: true,",
+			"\tvalue: 'tea',",
+			"\tname: 'drink',",
+			"}, 'radioOne');"
+		],
+		"description": "dijit radio button"
+	}
+  
+  // End copy here <----------
+}
